@@ -246,7 +246,7 @@ Requires: cli, glue, lifecycle, rlang
 Package: haven
 Source: CRAN
 Version: 2.5.3
-Hash: 338a0cfb1544c0e7b912d2ce98a3d240
+Hash: 1751162c920dd86389191c42e4462aa1
 Requires: cli, cpp11, forcats, lifecycle, rlang, tibble, tidyselect,
     vctrs, hms, readr
 
@@ -401,13 +401,13 @@ Hash: e66768bb271558f9eb3dcc56be5b50ef
 Package: purrr
 Source: CRAN
 Version: 1.0.2
-Hash: 00f9a690872c158c5847c2a85b497f0a
+Hash: 8f597ab7ace5baa426d2b541fb378b50
 Requires: cli, lifecycle, magrittr, rlang, vctrs
 
 Package: ragg
 Source: CRAN
 Version: 1.2.6
-Hash: 97c156070830372f3747ae4add2b19e9
+Hash: 03104dfe08835e01796aa246a80b9eaa
 Requires: systemfonts, textshaping
 
 Package: rappdirs
@@ -418,14 +418,14 @@ Hash: fd602edfd7dbf365642e35dd9cc97958
 Package: readr
 Source: CRAN
 Version: 2.1.4
-Hash: a9c01c3661fbc707010b3f7407fc64e4
+Hash: 88ad69871270adab7d4d46b7b907fd14
 Requires: R6, cli, clipr, cpp11, crayon, hms, lifecycle, rlang, tibble,
     tzdb, vroom
 
 Package: readxl
 Source: CRAN
 Version: 1.4.3
-Hash: 6548248cd4dec392b88c57dd70e61b51
+Hash: d93308bc5290479a0b5d4cec39abe86b
 Requires: cellranger, cpp11, progress, tibble
 
 Package: rematch
@@ -520,13 +520,13 @@ Hash: 61e28854faf54b74c1991286411cacf2
 Package: systemfonts
 Source: CRAN
 Version: 1.0.5
-Hash: 7f715f3cbb98f2bc9fe468e2134f919d
+Hash: 13322d265ae6b9d76fc954f51e2eed2c
 Requires: cpp11
 
 Package: textshaping
 Source: CRAN
 Version: 0.3.7
-Hash: 4220b71fb04c095de0295833d597c07e
+Hash: d02ec388b215b8c7119bf0c90fc2932e
 Requires: cpp11, systemfonts
 
 Package: tibble
@@ -538,7 +538,7 @@ Requires: fansi, lifecycle, magrittr, pillar, rlang, vctrs, pkgconfig
 Package: tidyr
 Source: CRAN
 Version: 1.3.0
-Hash: f59032cc93fe0ab60ddae295c4eeea7f
+Hash: 44d25119c106993001f5604953abbb15
 Requires: cli, dplyr, glue, lifecycle, magrittr, purrr, rlang, stringr,
     tibble, tidyselect, vctrs, cpp11
 
@@ -560,7 +560,7 @@ Requires: broom, cli, conflicted, dbplyr, dplyr, dtplyr, forcats,
 Package: timechange
 Source: CRAN
 Version: 0.2.0
-Hash: 4c887df937e11703aed879abf4b558a2
+Hash: cdd2763192c235def361d56e00996b3c
 Requires: cpp11
 
 Package: tinytex
@@ -572,7 +572,7 @@ Requires: xfun
 Package: tzdb
 Source: CRAN
 Version: 0.4.0
-Hash: a42b4f087488ef4c56fc6960a1510841
+Hash: 225ca02a8ecedc7a7aae6eaf9cf0f3d7
 Requires: cpp11
 
 Package: utf8
@@ -599,7 +599,7 @@ Hash: 5d04b69b3004921c88af88bcce67e7d9
 Package: vroom
 Source: CRAN
 Version: 1.6.4
-Hash: 295f0f653cdc832cd025ef60b8050720
+Hash: 0e3cef91c4ac3ece64e0f06bd7546db9
 Requires: bit64, cli, cpp11, crayon, glue, hms, lifecycle, rlang,
     tibble, tidyselect, tzdb, vctrs, withr, progress
 
