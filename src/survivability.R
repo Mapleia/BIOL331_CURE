@@ -1,11 +1,11 @@
 library(tidyverse)
+library(googlesheets4)
 library(readxl)
-library(ggplot2)
-
-data_path <- "datasets/survivability.xlsx"
-survivability_raw_df <- read_excel(data_path, sheet="hh data")%>%
+library(tidyverse)
+sheet_url = "https://docs.google.com/spreadsheets/d/1bcj83_IeYjC3aGNcZdNVh8MFgFJbSqJEdrvB0ZNb7bc/edit?usp=sharing"
+survivability_raw_df <- read_sheet(sheet_url,
+                          sheet="hh_data")%>%
   mutate_at(vars(TAPE), factor)
-
 
 percent_surv_df <- survivability_raw_df %>%
   group_by(TAPE, DAY) %>%
