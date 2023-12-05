@@ -73,12 +73,12 @@ one.way <- without_outliers %>%
 one.way
 
 # Effect of time at each level of exercises group
-one.way2 <- without_outliers %>%
-  group_by(tape_type) %>%
-  anova_test(dv = percent_loss, wid = id, within = loss_day) %>%
-  get_anova_table() %>%
-  adjust_pvalue(method = "bonferroni")
-one.way2
+# one.way2 <- without_outliers %>%
+#   group_by(tape_type) %>%
+#   anova_test(dv = percent_loss, wid = id, within = loss_day) %>%
+#   get_anova_table() %>%
+#   adjust_pvalue(method = "bonferroni")
+# one.way2
 
 pwc <- without_outliers %>%
   group_by(loss_day) %>%
@@ -91,8 +91,12 @@ create_box_plot <- function(no_outliers_df, full_df, pwc) {
   pwc.filtered <- pwc %>% filter(loss_day != "0_1")
   loss_label <- c("1", "2", "3", "4")
   bxp <- ggboxplot(
-    full_df, x = "loss_day", y = "percent_loss",
-    color = "tape_type", palette = "jco") + 
+    full_df,
+    x = "loss_day",
+    y = "percent_loss",
+    fill = "tape_type",
+    palette = c("#444e86", "#dd5182", "#ffa600"),
+    ) + 
     stat_pvalue_manual(pwc.filtered, tip.length = 0, hide.ns = TRUE) +
     labs(
       # subtitle = get_test_label(res.aov, detailed = TRUE),

@@ -21,7 +21,7 @@ create_survivability_plot <- function(dat_df) {
     x="DAY",
     y="percent_survived",
     color="TAPE",
-    palette = "jco"
+    palette = c("#444e86", "#dd5182", "#ffa600"),
   ) +
   labs(
     title="Figure 2b. Survivability of different tapes",
