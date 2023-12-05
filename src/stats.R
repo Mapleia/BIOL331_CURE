@@ -52,16 +52,9 @@ without_outliers %>%
   group_by(tape_type, loss_day) %>%
   get_summary_stats(percent_loss, type = "mean_sd")
 
-is.factor(without_outliers$tape_type)
-is.factor(without_outliers$loss_day)
-
-unique(without_outliers$tape_type)
-unique(without_outliers$loss_day)
-
-which(sapply(without_outliers, function(x) (is.character(x) | is.factor(x)) & length(unique(x))<2))
-
 # Two-way ANOVA test
-res.aov <- loss_df %>% anova_test(percent_loss ~ tape_type * loss_day)
+res.aov <- loss_df %>% 
+  anova_test(percent_loss ~ tape_type * loss_day)
 get_anova_table(res.aov)
 
 # Effect of group at each time point
@@ -86,7 +79,7 @@ pwc <- without_outliers %>%
   add_xy_position(x = "loss_day")
 pwc
 
-create_box_plot <- function(no_outliers_df, full_df, pwc) {
+create_box_plot <- function(full_df, pwc) {
   # Pairwise comparisons between group levels
   pwc.filtered <- pwc %>% filter(loss_day != "0_1")
   loss_label <- c("1", "2", "3", "4")
@@ -120,11 +113,20 @@ create_box_plot <- function(no_outliers_df, full_df, pwc) {
 }
 
 
-bxp <- create_box_plot(without_outliers, loss_df, pwc)
+bxp <- create_box_plot(loss_df, pwc)
 bxp
 
-nocommon_legend <- ggarrange(bxp,lnp,ncol=1, nrow=2, common.legend = FALSE, legend="bottom")
-common_legend <- ggarrange(bxp,lnp,ncol=1, nrow=2, common.legend = TRUE, legend="bottom")
+nocommon_legend <- ggarrange(bxp,lnp,
+                             ncol=1,
+                             nrow=2,
+                             common.legend = FALSE,
+                             legend="bottom")
+
+common_legend <- ggarrange(bxp,lnp,
+                           ncol=1,
+                           nrow=2,
+                           common.legend = TRUE,
+                           legend="bottom")
 
 width <- 11.2
 height <- 14
@@ -146,3 +148,5 @@ ggsave("outputs/fig_2_common_legend.png",
        height=height,
        dpi = 200,
 )
+
+write_csv(loss_df, "weight_loss_table.csv")

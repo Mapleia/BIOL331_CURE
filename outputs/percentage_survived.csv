@@ -1,0 +1,13 @@
+TAPE,DAY,count_survived,count_total,percent_survived
+scotch,1,6,6,100
+scotch,2,6,6,100
+scotch,3,5,6,83.33333333333334
+scotch,4,3,6,50
+masking,1,8,8,100
+masking,2,7,8,87.5
+masking,3,7,8,87.5
+masking,4,3,8,37.5
+packing,1,5,5,100
+packing,2,5,5,100
+packing,3,3,5,60
+packing,4,1,5,20

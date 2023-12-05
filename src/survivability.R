@@ -42,3 +42,6 @@ create_survivability_plot <- function(dat_df) {
 }
 
 lnp <- create_survivability_plot(percent_surv_df)
+
+
+write_csv(percent_surv_df, "outputs/percentage_survived.csv")
