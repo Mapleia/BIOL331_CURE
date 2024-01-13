@@ -149,4 +149,4 @@ ggsave("outputs/fig_2_common_legend.png",
        dpi = 200,
 )
 
-write_csv(loss_df, "weight_loss_table.csv")
+write_csv(loss_df, "outputs/weight_loss_table.csv")
